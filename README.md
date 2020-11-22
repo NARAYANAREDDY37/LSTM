@@ -25,3 +25,9 @@ One of the appeals of RNNs is the idea that they might be able to connect previo
 Sometimes, we only need to look at recent information to perform the present task. For example, consider a language model trying to predict the next word based on the previous ones. If we are trying to predict the last word in “the clouds are in the sky,” we don’t need any further context – it’s pretty obvious the next word is going to be sky. In such cases, where the gap between the relevant information and the place that it’s needed is small, RNNs can learn to use the past information.
 
 ![RNN-shorttermdepdencies](https://user-images.githubusercontent.com/58145503/99902517-5e3aa780-2ce4-11eb-974e-b159687b0961.png)
+
+But there are also cases where we need more context. Consider trying to predict the last word in the text “I grew up in France… I speak fluent French.” Recent information suggests that the next word is probably the name of a language, but if we want to narrow down which language, we need the context of France, from further back. It’s entirely possible for the gap between the relevant information and the point where it is needed to become very large.
+
+Unfortunately, as that gap grows, RNNs become unable to learn to connect the information.
+
+![RNN-longtermdependencies](https://user-images.githubusercontent.com/58145503/99902536-83c7b100-2ce4-11eb-958c-33bcff42bd33.png)
