@@ -53,3 +53,6 @@ LSTMs also have this chain like structure, but the repeating module has a differ
 
 ![LSTM3-chain](https://user-images.githubusercontent.com/58145503/99902640-4adc0c00-2ce5-11eb-984a-4637892c1f86.png)
 
+The repeating module in an LSTM contains four interacting layers.
+Don’t worry about the details of what’s going on. We’ll walk through the LSTM diagram step by step later. For now, let’s just try to get comfortable with the notation we’ll be using.
+
