@@ -5,7 +5,7 @@ Traditional neural networks can’t do this, and it seems like a major shortcomi
 
 Recurrent neural networks address this issue. They are networks with loops in them, allowing information to persist.
 
-![RNN-rolled](https://user-images.githubusercontent.com/58145503/99902459-00a65b00-2ce4-11eb-8742-db48d9234009.png width="50px")
+![RNN-rolled](https://user-images.githubusercontent.com/58145503/99902459-00a65b00-2ce4-11eb-8742-db48d9234009.png) <width="50px">
 
 In the above diagram, a chunk of neural network, A, looks at some input xt and outputs a value ht. A loop allows information to be passed from one step of the network to the next.
 
