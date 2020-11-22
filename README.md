@@ -31,3 +31,25 @@ But there are also cases where we need more context. Consider trying to predict 
 Unfortunately, as that gap grows, RNNs become unable to learn to connect the information.
 
 ![RNN-longtermdependencies](https://user-images.githubusercontent.com/58145503/99902536-83c7b100-2ce4-11eb-958c-33bcff42bd33.png)
+
+In theory, RNNs are absolutely capable of handling such “long-term dependencies.” A human could carefully pick parameters for them to solve toy problems of this form. Sadly, in practice, RNNs don’t seem to be able to learn them. The problem was explored in depth by Hochreiter (1991) [German] and Bengio, et al. (1994), who found some pretty fundamental reasons why it might be difficult.
+
+Thankfully, LSTMs don’t have this problem!
+
+## LSTM Networks
+Long Short Term Memory networks – usually just called “LSTMs” – are a special kind of RNN, capable of learning long-term dependencies. They were introduced by Hochreiter & Schmidhuber (1997), and were refined and popularized by many people in following work.1 They work tremendously well on a large variety of problems, and are now widely used.
+
+LSTMs are explicitly designed to avoid the long-term dependency problem. Remembering information for long periods of time is practically their default behavior, not something they struggle to learn!
+
+All recurrent neural networks have the form of a chain of repeating modules of neural network. In standard RNNs, this repeating module will have a very simple structure, such as a single tanh layer.
+
+
+![LSTM3-SimpleRNN](https://user-images.githubusercontent.com/58145503/99902628-31d35b00-2ce5-11eb-9312-ecaafee60420.png)
+
+
+- The repeating module in a standard RNN contains a single layer.
+
+LSTMs also have this chain like structure, but the repeating module has a different structure. Instead of having a single neural network layer, there are four, interacting in a very special way.
+
+![LSTM3-chain](https://user-images.githubusercontent.com/58145503/99902640-4adc0c00-2ce5-11eb-984a-4637892c1f86.png)
+
